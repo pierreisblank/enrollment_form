@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(to bottom, #c6def1, #68bae2);
+            color: #000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+        }
+
+        h1,
+        h3 {
+            color: black;
+            text-align: center;
+        }
+
+        ol {
+            margin-bottom: 20px;
+            text-align: center;
+            display: inline-block;
+            color: black;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        form {
+            border: 1px solid #bdc3c7;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+            margin: auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .icon-input {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            padding: 8px;
+            background-color: #f7f7f7;
+        }
+
+        .icon-input i {
+            color: #3498db;
+        }
+
+        .icon-input input,
+        .icon-input select {
+            border: none;
+            outline: none;
+            flex: 1;
+            background: transparent;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .submit-btn {
+    background: linear-gradient(to right, #3498db, #95d1ff);
+    color: white;
+    padding: 12px 0;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, #95d1ff, #3498db);
+    transform: translateY(-3px);
+}
+
+        .submit-btn:hover {
+            background-color: #2980b9;
+            color: rgb(255, 0, 0);
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 30px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table th,
+        table td {
+            border: 1px solid #bdc3c7;
+            text-align: left;
+            padding: 8px;
+        }
+
+        table th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+    </style>
+</head>
+
+<body>
+    <h1>Student Enrollment Form</h1>
+
+    <div class="container">
+        <!-- Instructions -->
+        <h3>Instructions:</h3>
+        <div style="text-align: center;">
+            <ol>
+                <li>Fill in the form fields.</li>
+                <li>Check your interests.</li>
+                <li>Click "Enroll Now" to submit.</li>
+            </ol>
+        </div>
+
+        <!-- Enrollment Form -->
+        <form action="#">
+            <div class="form-group">
+                <label for="full-name">Full Name:</label>
+                <div class="icon-input">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <div class="icon-input">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <div class="icon-input">
+                    <i class="fas fa-calendar-alt"></i>
+                    <input type="number" id="age" name="age" placeholder="Enter your age" required min="15">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Sex:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="sex" value="Male" required> Male</label>
+                    <label><input type="radio" name="sex" value="Female" required> Female</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Course Options:</label>
+                <div class="icon-input">
+                    <i class="fas fa-book"></i>
+                    <select id="course" name="course" required>
+                        <option value="BSIT">BSIT</option>
+                        <option value="BSSW">BSSW</option>
+                        <option value="BSPA">BSPA</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Interests:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="interests" value="Web Development"> Web Development</label>
+                    <label><input type="checkbox" name="interests" value="Data Science"> Data Science</label>
+                    <label><input type="checkbox" name="interests" value="Networking"> Networking</label>
+                    <label><input type="checkbox" name="interests" value="Graphic Design"> Graphic Design</label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Enroll Now</button>
+        </form>
+
+        <!-- Student Data Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                    <th>Course</th>
+                    <th>Interests</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Sarah Fortune</td>
+                    <td>sarahfortune@gmail.com</td>
+                    <td>22</td>
+                    <td>female</td>
+                    <td>BSIT</td>
+                    <td>Web Development, Networking</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Orianna Reveck</td>
+                    <td>clockwork@gmail.com</td>
+                    <td>21</td>
+                    <td>Female</td>
+                    <td>BSSW</td>
+                    <td>Case Manager, Author</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Shauna Vayne</td>
+                    <td>nighthunter@gmail.com</td>
+                    <td>20</td>
+                    <td>Female</td>
+                    <td>BSPA</td>
+                    <td>Budget Analyst, City Management</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Jericho Swain</td>
+                    <td>ilovecrows@gmail.com</td>
+                    <td>23</td>
+                    <td>Male</td>
+                    <td>BSIT</td>
+                    <td>Graphic Design, Data Science</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Katarina Du Couteau</td>
+                    <td>garenislove@gmail.com</td>
+                    <td>22</td>
+                    <td>Female</td>
+                    <td>BSSW</td>
+                    <td>Psychotherapist, Counselor</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
